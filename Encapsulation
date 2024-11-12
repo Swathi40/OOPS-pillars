@@ -1,0 +1,50 @@
+#Encapsulation#
+#1.Public access modifier#
+class monday:
+    def __init__(self):
+        self.var=40
+    def method(self):
+        print(self.var)
+obj=monday()
+print(obj.var)
+obj.method()        
+
+#2.Private access modifier#
+class monday:
+    def __init__(self):
+        self._var=40
+    def method(self):
+        print(self._var)
+obj=monday()
+print(obj._var)
+obj.method()        
+
+#3.Protected access modifier#
+class monday:
+    def __init__(self):
+        self._var=40
+    def method(self):
+        print(self._var)
+obj=monday()
+print(obj._var)
+obj.method() 
+
+#Using Getter method and Setter method we see protected acces modifier#
+class monday:
+    def __init__(self):
+        self.var1=20
+        self._var2=60
+        self.__var3=40
+    def method(self):
+        print(self.var1)
+        print(self._var2)
+        print(self.__var3)
+    def getter(self):
+        return self.__var3
+    def setter(self):
+        self.__var3=100
+obj=monday()
+obj.method() 
+print(obj.getter())
+obj.setter()
+print(obj.getter())
